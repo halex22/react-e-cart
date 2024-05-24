@@ -10,14 +10,16 @@ export function Filters () {
   return (
     <>
       <section id='filter-container'>
-        <div className='price-filter'>
-          <label htmlFor='price'>Price</label>
-          <input
-            type='range' id='price'
-            value={minPrice} onChange={handleMinPriChange}
-            min='0' max='1000'
-          />
-          <span>$ {minPrice} </span>
+        <div id='price-filter-container'>
+          <div className='price-filter'>
+            <label htmlFor='price'>Price</label>
+            <input
+              type='range' id='price'
+              value={minPrice} onChange={handleMinPriChange}
+              min='0' max='1000'
+            />
+            <span>$ {minPrice} </span>
+          </div>
         </div>
         <div className='categories-filter'>
           <span>Categories</span>

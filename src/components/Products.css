@@ -72,13 +72,48 @@ img {
   border: 0.25rem black;
 }
 
-#filter-container {
+@media screen and (min-width:703px) {
+  #filter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .categories-filter {
+    justify-content: start;
+    margin: 0;
+  }
+  .price-filter {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 702px) {
+  #filter-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categories-filter {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  #price-filter-container {
+    justify-content: center;
+  }
+}
+
+#price-filter-container {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .price-filter {
-  display: flex;
+  max-width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   margin-right: 3rem;
 }
